@@ -13,7 +13,7 @@ body {
 }
 /* ____________HEADER - top-bar/menu_____________ */
 
-header {
+.header {
 background-color:var(--page-color);
 height: 80px;
 box-sizing: border-box;
@@ -21,7 +21,7 @@ box-sizing: border-box;
 margin-bottom: 0px;
 }
 
-.container {
+.header__container {
 display: flex; 
 box-sizing: border-box;
 max-width: 1200px;
@@ -35,47 +35,94 @@ border-bottom: 1px solid #ececec;
 background-color: var(--page-color);
 }
 
-.content-logo {
+.header__logo {
 display: inline-block;
 margin: 0px;
 margin-bottom: 0px;
 padding-bottom: 0px;
 box-sizing: border-box;
 margin-right: 0px;
+}
+
+/* ==== WSPÓLNE ELEMENTY ---start ===*/
+.logo {
 
 }
 
-.content-menu {
+.logo-link {
+
+}
+
+.logo-part {
+  color: var(--interactive-elements-color);
+  margin:0px;
+}
+
+/* ==== WSPÓLNE ELEMENTY ---end ===*/
+
+.header__logo-link {
+  display: flex;
+  font-family: "Raleway";
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 31px;
+  letter-spacing: 0.03em;
+  text-align: left;
+  color: black;
+  text-decoration: none;
+  margin-top: 24px;
+  margin-bottom: 25px;
+}
+
+/* ++++++++==============+++++++++ */
+
+
+
+/* .main-nav{
 display: inline-block;
 margin: 0px;
 box-sizing: border-box;
 height: 80px;
 padding: 0px;
 margin-right: 115;
+} */
+
+.main-nav {
+height: 80px;
+padding: 0px;
+margin-right: 115;
 }
 
-.content-contacts {
+
+
+.main-nav__list{
+display: flex;
+list-style: none;
+padding: 0px;
+margin: 32px;
+margin-left: 93px;
+}
+
+.contacts {
 display: inline-block;
+list-style: none;
 margin: 0px;
 box-sizing: border-box;
 height: 80px;
 padding: 0px;
 margin-left: 130px;
 }
-.content-contacts:hover {
-color: var(--interactive-elements-color);  
-}
 
-.menu {
+.contacts__list {
 display: flex;
 list-style: none;
 padding: 0px;
-background-position: center;
 margin: 32px;
 margin-left: 93px;
+
 }
 
-.link-menu {
+.link {
   position: relative;
   margin-right: 46px;
   color:var(--main-font-color);
@@ -86,36 +133,13 @@ margin-left: 93px;
   letter-spacing: 0.02em;
 }
 
-.link-contacts {
-  color:var(--secondary-font-color);
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 16px;
-  letter-spacing: 0.02em;
-  
-}
 
-.contact-list-elements {
-display: flex;
-align-items: center;  
-}
 
-.contact-list-elements:hover {
-  color: var(--interactive-elements-color);
---color4:var(--interactive-elements-color);  
---color5:var(--interactive-elements-color);  
-}
-
-.link-menu:hover {
+.link:hover {
   color: var(--interactive-elements-color);
 }
 
-.link-menu {
-  position: relative;
-}
-
-.link-menu.nav::after {
+.main-nav__link::after {
 content: "";
 position: absolute;
 width: 100%;
@@ -129,7 +153,7 @@ width: 0;
 
 }
 
-.link-menu.nav.underline::after {
+.main-nav__link--underline::after {
 content: "";
 position: absolute;
 width: 100%;
@@ -142,17 +166,27 @@ margin: 0;
 width: 100;
 }
 
-/* .link-menu.nav:hover:after {
-  width: 100%;
-} */
+.contacts__link {
+  color:var(--secondary-font-color); 
+}
 
-.link-mail {
+.contacts__list--elements {
+display: flex;
+align-items: center;  
+}
+
+.contacts__list--elements:hover {
+--color: var(--interactive-elements-color);
+--color4:var(--interactive-elements-color);  
+--color5:var(--interactive-elements-color);  
+}
+
+.contacts__link--mail{
 margin-right: 50px;  
 margin-left :10px;
 }
 
-
-.link-tel {
+.contacts__link--tel {
 margin-left: 10px;
 margin-right: 0px;
 }
@@ -162,37 +196,29 @@ margin-right: 0px;
 background-color: #F5F4FA;
 }
 
-.logo {
-  font-family: "Raleway";
-  font-size: 26px;
-  font-weight: 700;
-  line-height: 31px;
-  letter-spacing: 0.03em;
-  text-align: left;
-  color: black;
-  text-decoration: none;
-  margin-top: 24px;
-  margin-bottom: 25px;
-}
 
-.logo-part {
-  color: var(--interactive-elements-color);
-  margin:0px;
-  
-}
+
+
 
  /* Ta lista odnosi się do wszystkich list w pliku index i portfolio */
 
 .list {
-  list-style: none;
-   display:inline-flex;
+   list-style: none;
+   display: inline-flex;
    padding: 0px;
    margin: 0px; }
 
-
-
 /* ________ H1 - EFEKTYWNE ROZWIĄZANIA DLA WASZEGO BIZNESU_______ */
  
+.main-title {
+
+  text-align: center;
+  height: 600px; 
+  margin-top: 0px;
+  border: 0.1px solid; 
+  padding: 0px;
+ 
+} 
 .container-main-title {
 box-sizing: border-box;
 max-width: 1200px;
@@ -202,24 +228,16 @@ margin-bottom: 0px;
 
 }
 
-.section-main-title.background {
+.main-title--background {
 max-width: 1600px;
 background-image: linear-gradient(to top, rgb(47, 48, 58, 0.4), 
 rgb(47, 48, 58, 0.4)), url(../images/backgroundheader.jpg);
 margin-top: 0;
 }
 
-.section-main-title {
 
-  text-align: center;
-  height: 600px; 
-  margin-top: 0px;
-  border: 0.1px solid; 
-  padding: 0px;
- 
-} 
 
-.main-title {
+.main-title__h1 {
   font-size: 44px;
   font-weight: 900;
   line-height: 60px;
@@ -233,7 +251,7 @@ margin-top: 0;
   
 }
 
-.button-header {
+.main-title__button {
   background-color: var(--interactive-elements-color);
   color: white;
   font-family: "Roboto", sans-serif;
@@ -249,7 +267,7 @@ margin-top: 0;
   margin-top: 0px;
 }
 
-.button-header:hover {
+.main-title__button:hover {
  color: var(--main-font-color); 
  background-color:#F5F4FA;
 }
@@ -725,7 +743,14 @@ color:var(--interactive-elements-color);
    z-index: 1;
 }
 
-.modal {
+.backdrop--is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: scale(3);
+}
+
+.backdrop__modal {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -735,17 +760,9 @@ color:var(--interactive-elements-color);
   background-color: white;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
- 
 }
 
-.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transform: scale(3);
-}
-
-.close-btn {
+.backdrop__close-btn {
   height: 30px;
   width: 30px;
   position: relative;
@@ -848,13 +865,6 @@ line-height: 20px;
 color: rgba(255, 255, 255, 1);
 }
 
-/* .input:hover {
-border: 1px solid var(--interactive-elements-color);
-background-color: #2F303A;
-transition: 250ms;
-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-} */
-
 .input:focus {
 background-color: #2F303A;
 border: 3px solid #858585 ;
@@ -864,12 +874,12 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 /* ====== FORM in Modal Windwow ======= */
 
-.modal-form {
+.backdrop__form {
  margin-top: 40px;
  align-items: center;
 }
 
-.modal-form-header {
+.backdrop__header {
 font-size: 20px;
 font-weight: 700;
 line-height: 23px;
@@ -878,7 +888,7 @@ text-align: center;
 margin-bottom: 30px;
 }
 
-.fieldset-modal {
+.backdrop__fieldset {
 display: flex;
 margin-block: 28px;
 position: relative; 
@@ -891,20 +901,13 @@ padding: 0px;
 align-items: center;
 }
 
-/* .fieldset-modal:hover {
-outline: 1px solid var(--interactive-elements-color);
-transition: 250ms;
-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
-} */
-
-.fieldset-modal:has(input:focus) {
+.backdrop__fieldset:has(input:focus) {
 outline: 1px solid var(--interactive-elements-color);
 transition: 250ms;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-
-.fieldset-modal-comment {
+.backdrop__comment {
 display: flex;
 width: 448px;
 height: 120px;
@@ -915,19 +918,14 @@ border: 1px solid rgba(33, 33, 33, 0.2);
 border-radius: 4px;
 }
 
-/* .fieldset-modal-comment:hover {
-outline: 1px solid var(--interactive-elements-color); 
-transition: 250ms;
-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-} */
 
-.fieldset-modal-comment:focus-within  {
+.backdrop__comment:focus-within  {
 outline: 1px solid var(--interactive-elements-color); 
 transition: 250ms;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-textarea {
+.backdrop__textarea {
 resize: none;
 border: 0;
 background-color: transparent;
@@ -938,7 +936,7 @@ margin: 0px;
 padding: 10px 2px;
 }
 
-.modal-form label {
+.backdrop__label {
 position: absolute;
 top: -18px;
 left: 0px;
@@ -948,28 +946,30 @@ line-height: 14px;
 letter-spacing: 0.01em;
 }
 
-.modal-form label.textarea {
+.backdrop__label--comment {
   position: absolute;
   top: 279px;
   left: 40px;
+  color: rgba(117, 117, 117, 1);
+  font-size: 12px;
 }
 
-.modal-form input {
+.backdrop__input {
 border: 0;
 background-color: transparent;
 font-size: 16px;  
 width: 404px;
 }
 
-.modal-form input:focus {
+.backdrop__input:focus {
 outline: none;
 }
 
-textarea:focus {
+.backdrop__textarea:focus {
 outline: none;
 }
 
-.modal-form .modal-checkbox {
+.backdrop__checkbox {
 display: flex;
 position: static;
 margin-left: 52px;  
@@ -982,59 +982,34 @@ align-items: center;
 margin-top: 20px;
 }
 
-.modal-checkbox input {
+.backdrop__checkbox-input {
 width: 16px;
 height: 15px;
 margin-right: 7px;
 
 }
 
-.consent-links {
+.backdrop__consent-link  {
 color: var(--interactive-elements-color);
 }
 
-.modal-button-box {
+.backdrop__button-box {
 text-align: center;
 margin-top: 30px;
 }
 
-.submit-button.send {
-margin: 0px;
-}
-
-.icons-modal-form {
+.backdrop__icon {
 margin: 14px 15px;
 }
 
-/* .icons-modal-form:hover {
-fill: var(--interactive-elements-color);
-transition: 250ms;
-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-} */
- 
-/* .fieldset-modal:has(input:hover) {
-fill: var(--interactive-elements-color);
-transition: 250ms;
-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  
-} */
-
-/* .fieldset-modal:has(input:focus) {
-fill: var(--interactive-elements-color);
-transition: 250ms;
-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-} */
-
-.fieldset-modal:focus-within {
+.backdrop__fieldset:focus-within {
 fill: var(--interactive-elements-color);
 border-color:  var(--interactive-elements-color);
 transition: 250ms;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);  
+background-color: white;
 }
 
-input.form {
-  height: 40px;
-}
 
 input.form:has(input:focus) {
 fill: var(--interactive-elements-color);
@@ -1056,7 +1031,7 @@ gap: 24px;
  scale: 1.05;
 }
 
-.icon-check {
+.backdrop__checkbox-icon {
 width: 16px;
 height: 15px;
  position: absolute;
