@@ -1,0 +1,107 @@
+/* ________________________PORTFOLIO_____________________________ */
+
+
+.section-portfolio {
+background-color: white;
+margin: 0 auto;
+padding-top: 0px;
+
+}
+
+ .section-portfolio-container {
+  max-width: 1200px;
+  margin: 0 auto;
+ }
+
+ .section-portfolio__list {
+display: flex;
+justify-content: center;
+gap: 30px;
+flex-wrap: wrap;
+row-gap: 30px;
+}
+
+.section-portfolio__figure {
+  border: 1px solid #EEEEEE;
+  box-shadow: none;
+  margin: 0px;
+  padding: 0px; 
+}
+
+.section-portfolio__figure:hover {
+box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);  
+}
+
+.section-portfolio__wrapper {
+ position: relative;
+  overflow: hidden;
+   cursor: pointer;
+}
+
+
+.section-portfolio__overlay {
+  position: absolute;
+  Width: 370px;
+  Height: 294px;
+  bottom: 0;
+  top: 0;
+  opacity: 0;
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  
+}
+
+.section-portfolio__wrapper:hover .section-portfolio__overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section-portfolio__text {
+color: rgba(255, 255, 255, 1);
+position: absolute;
+font-size: 18px;
+font-weight: 400;
+line-height: 28px;
+letter-spacing: 0.03em;
+text-align: left;
+padding: 49px 45px 49px 24px;
+margin: 0;
+}
+
+.section-portfolio__figcaption {
+background: white;
+position: relative;
+font-size: 16px;
+font-weight: 400;
+line-height: 30px;
+letter-spacing: 0.03em;
+text-align: left;
+color: var(--secondary-font-color);
+padding-top: 20px;
+padding-bottom: 4px;
+padding-left: 24px;
+padding-right: 24px;
+margin-top: 0;
+}
+
+.section-portfolio__project-name {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: 0.06em;
+  text-align: left;
+  margin-bottom: 4px;
+  color: var(--main-font-color);
+}
+.section-portfolio__product {
+padding-bottom: 20px;  
+margin-bottom: 0px;
+margin-top: 0px;
+font-family: Roboto;
+font-size: 16px;
+font-weight: 400;
+line-height: 30px;
+letter-spacing: 0.03em;
+}

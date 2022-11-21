@@ -1,0 +1,46 @@
+/* ____________HEADER - top-bar/menu_____________ */
+
+.header {
+background-color:var(--page-color);
+height: 80px;
+box-sizing: border-box;
+/* border-bottom: 1px solid #ececec; */
+margin-bottom: 0px;
+}
+
+.header__container {
+display: flex; 
+box-sizing: border-box;
+max-width: 1200px;
+height: 80px;
+margin: 0px auto;
+margin-top: 0px;
+margin-bottom: 0px;
+padding-left: 15px;
+padding-right: 15px;
+border-bottom: 1px solid #ececec;
+background-color: var(--page-color);
+}
+
+.header__logo {
+display: inline-block;
+margin: 0px;
+margin-bottom: 0px;
+padding-bottom: 0px;
+box-sizing: border-box;
+margin-right: 0px;
+}
+
+.header__logo-link {
+  display: flex;
+  font-family: "Raleway";
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 31px;
+  letter-spacing: 0.03em;
+  text-align: left;
+  color: black;
+  text-decoration: none;
+  margin-top: 24px;
+  margin-bottom: 25px;
+}
