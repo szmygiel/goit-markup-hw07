@@ -195,12 +195,12 @@ body {
   color: var(--secondary-font-color);
 }
 
-.contacts__list--elements {
+.contacts__element {
   display: flex;
   align-items: center;
 }
 
-.contacts__list--elements:hover {
+.contacts__element:hover {
   --color: var(--interactive-elements-color);
   --color4: var(--interactive-elements-color);
   --color5: var(--interactive-elements-color);
@@ -827,7 +827,7 @@ input.checkbox {
   padding-top: 0px;
 }
 
-.section-portfolio-container {
+.section-portfolio__container {
   max-width: 1200px;
   margin: 0 auto;
 }

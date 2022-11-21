@@ -2,25 +2,24 @@
  
 .section-services {
 background-color: white;
-}
 
-.section-services__container {
+&__container {
   max-width: 1200px;
   margin: 0 auto;
  }
 
-.section-services__list {
+&__list {
 display: flex;
 justify-content: center;
 gap: 30px;
 height: 294px;
 }
 
-.section-services__thumb {
+&__thumb {
 position: relative;
 }
 
-.section-services__label {
+&__label {
 position: absolute;
 color: rgba(255, 255, 255, 1);
 background-color: rgba(47, 48, 58, 0.8);
@@ -34,4 +33,5 @@ letter-spacing: 0.03em;
 text-align: center;
 text-transform: uppercase;
 padding: 27px 90px;
+}
 }

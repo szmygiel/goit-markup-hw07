@@ -26,10 +26,10 @@ body {
   font-weight: 500;
   line-height: 16px;
   letter-spacing: 0.02em;
-}
 
-.link:hover {
+  &:hover {
   color: var(--interactive-elements-color);
+}
 }
 
 .secondary-header {
@@ -54,11 +54,11 @@ body {
   cursor: pointer;
   margin-left: 12px;
   border-radius: 4px;
-}
 
-.submit-button:hover {
+  &:hover {
  color: var(--main-font-color);
  background-color:#F5F4FA;
+}
 }
 
 .logo-part {

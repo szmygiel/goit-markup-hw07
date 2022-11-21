@@ -7,9 +7,7 @@
   margin: 0 auto;
   padding: 94px 15px;
  
-}
-
-.section-clients__figure {
+&__figure {
 display: flex;
 height: 92px;
 width: 170px;
@@ -20,10 +18,11 @@ box-shadow: none;
 margin: 0px;
 padding: 0px; 
 
-}
-
-.section-clients__figure:hover {
+&:hover {
 color:var(--interactive-elements-color);
 --color1:var(--interactive-elements-color);
   border: 1px solid #2196f3; 
+}
+}
+
 }

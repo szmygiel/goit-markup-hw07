@@ -8,9 +8,7 @@ display: flex;
   padding: 0 15px;
   margin-top: 94px;
 
-}
-
-.motives__figure {
+&__figure {
   display: flex;
   height: 120px;
   width: 270px;
@@ -21,4 +19,4 @@ display: flex;
   border-radius: 4px;  
   
 }
-
+}

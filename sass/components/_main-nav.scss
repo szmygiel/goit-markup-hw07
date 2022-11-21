@@ -2,17 +2,15 @@
 height: 80px;
 padding: 0px;
 margin-right: 115;
-}
 
-.main-nav__list{
+&__list{
 display: flex;
 list-style: none;
 padding: 0px;
 margin: 32px;
 margin-left: 93px;
-}
 
-.main-nav__link::after {
+&::after {
 content: "";
 position: absolute;
 width: 100%;
@@ -25,8 +23,9 @@ margin: 0;
 width: 0;
 
 }
+}
 
-.main-nav__link--underline::after {
+&__link--underline::after {
 content: "";
 position: absolute;
 width: 100%;
@@ -38,3 +37,9 @@ border-radius: 2px;
 margin: 0;
 width: 100;
 }
+}
+
+
+
+
+

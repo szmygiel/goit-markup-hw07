@@ -15,16 +15,16 @@
    transition-duration: 1s;
   transition-timing-function: ease-in-out;
    z-index: 1;
-}
 
-.backdrop--is-hidden {
+&--is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
   transform: scale(3);
+
 }
 
-.backdrop__modal {
+&__modal {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -36,7 +36,7 @@
   border-radius: 4px;
 }
 
-.backdrop__close-btn {
+&__close-btn {
   height: 30px;
   width: 30px;
   position: relative;
@@ -48,12 +48,12 @@
  top: 8px;
 }
 
-.backdrop__form {
+&__form {
  margin-top: 40px;
  align-items: center;
 }
 
-.backdrop__header {
+&__header {
 font-size: 20px;
 font-weight: 700;
 line-height: 23px;
@@ -62,7 +62,7 @@ text-align: center;
 margin-bottom: 30px;
 }
 
-.backdrop__fieldset {
+&__fieldset {
 display: flex;
 margin-block: 28px;
 position: relative; 
@@ -73,15 +73,17 @@ border-radius: 4px;
 margin-left: 40px;
 padding: 0px;
 align-items: center;
-}
 
-.backdrop__fieldset:has(input:focus) {
-outline: 1px solid var(--interactive-elements-color);
+  &:focus-within {
+fill: var(--interactive-elements-color);
+border-color:  var(--interactive-elements-color);
 transition: 250ms;
-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);  
+background-color: white;
+}
 }
 
-.backdrop__comment {
+&__comment {
 display: flex;
 width: 448px;
 height: 120px;
@@ -90,16 +92,15 @@ align-items: center;
 margin-left: 40px;
 border: 1px solid rgba(33, 33, 33, 0.2);
 border-radius: 4px;
-}
 
-
-.backdrop__comment:focus-within  {
+&:focus-within  {
 outline: 1px solid var(--interactive-elements-color); 
 transition: 250ms;
-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);  
+}
 }
 
-.backdrop__textarea {
+&__textarea {
 resize: none;
 border: 0;
 background-color: transparent;
@@ -108,9 +109,13 @@ width: 448px;
 height: 120px;
 margin: 0px;
 padding: 10px 2px;
+
+&:focus {
+outline: none;
+}
 }
 
-.backdrop__label {
+&__label {
 position: absolute;
 top: -18px;
 left: 0px;
@@ -120,7 +125,7 @@ line-height: 14px;
 letter-spacing: 0.01em;
 }
 
-.backdrop__label--comment {
+&__label--comment {
   position: absolute;
   top: 279px;
   left: 40px;
@@ -128,22 +133,19 @@ letter-spacing: 0.01em;
   font-size: 12px;
 }
 
-.backdrop__input {
+&__input {
 border: 0;
 background-color: transparent;
 font-size: 16px;  
 width: 404px;
-}
 
-.backdrop__input:focus {
+&:focus {
 outline: none;
 }
-
-.backdrop__textarea:focus {
-outline: none;
 }
 
-.backdrop__checkbox {
+
+&__checkbox {
 display: flex;
 position: static;
 margin-left: 52px;  
@@ -156,43 +158,36 @@ align-items: center;
 margin-top: 20px;
 }
 
-.backdrop__checkbox-input {
+&__checkbox-input {
 width: 16px;
 height: 15px;
 margin-right: 7px;
 
+&:checked + span svg {
+fill: white;  
+background-color: #2196f3;
+border: 0.2px solid #FFFFFF;
+transition: 250ms;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.backdrop__consent-link  {
+}
+
+&__consent-link  {
 color: var(--interactive-elements-color);
 }
 
-.backdrop__button-box {
+&__button-box {
 text-align: center;
 margin-top: 30px;
 }
 
-.backdrop__icon {
+&__icon {
 margin: 14px 15px;
 }
 
-.backdrop__fieldset:focus-within {
-fill: var(--interactive-elements-color);
-border-color:  var(--interactive-elements-color);
-transition: 250ms;
-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);  
-background-color: white;
-}
 
-
-input.form:has(input:focus) {
-fill: var(--interactive-elements-color);
-transition: 250ms;
-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
-} 
-
-
-.backdrop__checkbox-icon {
+&__checkbox-icon {
 width: 16px;
 height: 15px;
  position: absolute;
@@ -203,14 +198,7 @@ height: 15px;
 border-radius: 2px;
 }
 
-input:checked + span svg {
-fill: white;  
-background-color: #2196f3;
-border: 0.2px solid #FFFFFF;
-transition: 250ms;
-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-input.checkbox {
+&__checkbox-input {
 visibility: hidden;
+}
 }
